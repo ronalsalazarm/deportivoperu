@@ -4,6 +4,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+html{
+    scroll-behavior: smooth;
+}
 body{
     font-family: tahoma;
 }
@@ -35,4 +38,54 @@ header{
     color: white;
     display: block;
     padding: 20px;
+}
+/* Estilos para el Banner */
+.banner{
+    position: relative; /* Es el padre */
+    background: url(../img/banner.gif);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 100vh;  /* Pantalla completa */
+
+}
+.overlay{
+    background: rgba(0, 0, 0, 0.5); /*0.5 es la opacidad  */
+    width: 100%;
+    min-height: 100Vh;
+}
+.content-banner{
+    position: absolute; /* Es el hijo */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+.content-banner h1{
+    text-align: center;
+    margin-bottom: 10px;
+}
+.content-banner p{
+    font-size: 18px;
+    line-height: 30px;
+}
+main{
+    width: 80%;
+    margin:20px auto;
+}
+main h2{ /* etiqueta padre  con etiqueta hija */
+    text-align: center;
+    margin-bottom: 10px;
+}
+main p{
+    font-size: 18px;
+    line-height: 30px;
+}
+.img-responsive{
+    width: 400px;
+    max-width: 100%; /* para adaptar imagen a cualquier dispositivo */
+    display: block;
+    margin: auto;
+    
 }
